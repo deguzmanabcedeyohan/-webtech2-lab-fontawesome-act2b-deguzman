@@ -8,13 +8,36 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
   <style>
-    .card { border-radius: 10px; }
-    #loadingScreen { z-index: 1050; }
+    body {
+      background: linear-gradient(135deg, #f0f4ff, #e6ecff);
+      font-family: 'Segoe UI', sans-serif;
+    }
+    .card {
+      border-radius: 15px;
+      border: none;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    }
+    .form-control {
+      border-radius: 8px;
+      padding: 12px;
+    }
+    .input-group-text {
+      background-color: #f8f9fa;
+      border-radius: 8px 0 0 8px;
+    }
+    .btn-primary {
+      border-radius: 8px;
+      padding: 10px;
+      font-weight: 500;
+    }
+    #loadingScreen {
+      z-index: 1050;
+      background: rgba(255, 255, 255, 0.9);
+    }
   </style>
 </head>
 <body>
-  <div id="loadingScreen" class="d-none position-fixed top-0 start-0 w-100 h-100 bg-light bg-opacity-75 d-flex justify-content-center align-items-center">
-
+  <div id="loadingScreen" class="d-none position-fixed top-0 start-0 w-100 h-100 d-flex justify-content-center align-items-center">
     <i class="fa fa-circle-notch fa-spin fa-3x text-primary" aria-hidden="true"></i>
   </div>
 
@@ -22,7 +45,7 @@
     <div style="max-width:400px; width:100%;">
       <div id="alertPlaceholder"></div>
 
-      <div class="card shadow p-4">
+      <div class="card p-4">
         <h3 class="text-center mb-4">Login</h3>
 
         <form id="loginForm" novalidate>
